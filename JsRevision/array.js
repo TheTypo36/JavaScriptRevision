@@ -29,6 +29,11 @@ console.log(newstr);
 //splice remove a part of arr include the last elem and also
 //changes the original arr
 
+console.log(`A origin: ${myHeros}`)
+console.log(`B slice: ${myHeros.slice(1,3)}`)
+console.log(`C origin(AfterSLice): ${myHeros}`)
+console.log(`D splice: ${myHeros.splice(1,3)}`)
+console.log(`E Origin(Aftersplice): ${myHeros}`)
 
 
  /* 
