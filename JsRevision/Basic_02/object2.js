@@ -34,3 +34,14 @@ console.log({...obj1,...obj2});
 //making array of keys or values of object
 console.log(Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
+
+const laptop ={
+    laptopName: ["MacbookAir","AsusVivobook","DellInsipron","LevenoThinkPad"],
+    laptopPrice: [70,80,90,100],
+    laptopProccessor: ["M1","I5","Ryzen7","Ryzen9"]
+}
+
+
+//destructuring 
+const {laptopName,laptopPrice} = laptop;
+console.log(laptopName,laptopPrice);
