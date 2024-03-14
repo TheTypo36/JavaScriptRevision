@@ -17,7 +17,7 @@ console.log(another_arr);
 console.log(another_arr.flat(Infinity));
 
 console.log(Array.from("Ashish"));
-const students ={
+const family ={
     1: "ashish",
     2: "anand",
     3: "Anvi",
@@ -25,4 +25,4 @@ const students ={
     5: "pinki"
 }
 
-console.log(Object.values(students));
+console.log(Object.values(family));
