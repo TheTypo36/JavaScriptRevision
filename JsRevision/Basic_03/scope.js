@@ -9,3 +9,20 @@ if(true){
 
 }
 console.log(a);
+
+//closure say that child function or scope can access variable or parent
+//but parent can't access child variables
+
+//touch up on hoisting concepts
+
+
+console.log(addOne(6));
+function addOne(num){
+    return (num+1);
+}
+
+
+// console.log(addTwo());
+const addTwo = function(num){
+    return(num+2);
+}
