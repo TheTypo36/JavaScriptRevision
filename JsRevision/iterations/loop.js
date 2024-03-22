@@ -23,3 +23,54 @@ console.log(maps);
 for (const key of maps) {
     console.log(key);
 }
+
+const myGames = {
+    'game1': 'GTA vice city',
+    'game2': 'IGI: covert strikes',
+    'game3': 'San andreas',
+    'game4': 'pubg'
+}
+
+
+//for in
+
+for (const key in myGames) {
+        console.log(`${key} is ${myGames[key]}`);
+}
+
+const programming = ['js','c++','java','python','ruby','swift'];
+
+for (const key in programming) {
+    console.log(`${key} stores ${programming[key]}`);
+}
+
+const coding = ['js','ruby','java','python','cpp']
+
+coding.forEach((ele)=>(
+    console.log(ele)
+));
+
+const printMe = (item) =>{
+    console.log(item);
+}
+coding.forEach(printMe);
+
+const myCoding = [
+    {
+        langName: "C++",
+        langEditor: "subl"
+    },
+    {
+        langName: "js",
+        langEditor: "vs"
+    },
+    {
+        langName: "java",
+        langEditor: "Eclipse"
+    }
+
+]
+
+myCoding.forEach((item)=>{
+    console.log(`The language ${item.langName} uses ${item.langEditor} as an editor`);
+})
