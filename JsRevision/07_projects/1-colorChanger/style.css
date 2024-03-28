@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 15px;
+}
+
+.yellow {
+  background-color: #feff00;
+}
+
+.blue {
+  background-color: #0000fe;
+}
+.white {
+  background-color: #ffffff;
+}
+.grey {
+  background-color: #747474;
+}
