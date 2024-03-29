@@ -1,0 +1,88 @@
+body {
+  background-color: #181718;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+#container {
+  width: 50%;
+  height: 500px;
+  background-color: #3a383a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#label {
+  margin-top: 80px;
+  padding: 20px;
+
+  width: 50%;
+  background-color: #201616;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: sticky;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+}
+#game input[type="number"],
+button {
+  padding: 5px;
+  margin: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+#game button {
+  background-color: #181718;
+  border: none;
+  color: white;
+  width: 150px;
+  margin-left: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.yellow {
+  color: yellow;
+}
+#restart {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 3px;
+  display: none;
+}
+
+#previousGuess span {
+  margin: 4px;
+  font-size: 14px;
+  color: red;
+}
