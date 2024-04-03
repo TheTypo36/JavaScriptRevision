@@ -1,3 +1,4 @@
+const ourNumber = Math.floor((Math.random() * 100) % 100);
 let result = document.querySelector("#result");
 const form = document.querySelector("form");
 const restart = document.querySelector("#restart");
@@ -13,7 +14,6 @@ const handleSubmit = (e) => {
     result.innerHTML = "INVALID INPUT";
     result.className = "red";
   }
-  const ourNumber = Math.floor(Math.random() * 100);
   if (number == ourNumber) {
     result.innerHTML = "!!Congralution, You Won!";
     result.className = "green";
@@ -30,15 +30,21 @@ const handleSubmit = (e) => {
       console.log(newEntry);
       prev.append(newEntry);
 
-      result.innerHTML = "Try Again";
+      if (ourNumber < number) {
+        result.innerHTML = "Lower";
+      } else {
+        result.innerHTML = "higher";
+      }
 
       count++;
     } else {
       let remaining = document.querySelector("#Remaining");
       remaining.innerText = 0;
-      result.innerHTML = "You lost";
+      result.innerHTML = `You lost, the number was${ourNumber}`;
       result.className = "red";
       restart.style.display = "block";
+      const input = document.querySelector("input");
+      input.setAttribute("disabled", "");
     }
   }
   console.log(ourNumber);
