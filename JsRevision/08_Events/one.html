@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Amazing Image</h2>
+    <div>
+      <ul id="image">
+        <li>
+          <img id="Farm"
+          src="https://images.pexels.com/photos/11113558/pexels-photo-11113558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        </li>
+        <li>
+          <img id="gate"
+          src="https://images.pexels.com/photos/13289844/pexels-photo-13289844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        </li>
+        <li>
+          <img id="streets"
+          src="https://images.pexels.com/photos/19935558/pexels-photo-19935558/free-photo-of-street-style.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        </li>
+        <li>
+          <img id="bighteve"
+          src="https://images.pexels.com/photos/20548700/pexels-photo-20548700/free-photo-of-two-chairs-on-a-dock-under-the-stars.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        </li>
+        <li>
+          <img id="coffee"
+          src="https://images.pexels.com/photos/20801057/pexels-photo-20801057/free-photo-of-a-person-holding-a-cup-of-tea-on-a-wooden-deck.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        </li>
+        <li><a href="https://google.com" id="google">click me</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //provide less feature
+    // document.querySelector("#gate").onclick = function () {
+    //   alert("owl click");
+
+    //best way
+    // document.querySelector("#gate").addEventListener("click", () => {
+    //   alert("gate click");
+    // });
+
+    //things to learn
+    //type,timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    //altkey, cntrkey,shiftkey,keyCode
+
+    //event propogation(default value is false) => event bubbling, event capture
+    //event bubbling is when parent and child both have respective event attach to them
+    //and when child is click the event attach to child is activate but the parent event is also activated after child bottom - up fashion
+    //even capturing is when you click the child , so first parent event is activated and then child top - down fashion
+    //to stop event propogation use => e.stopPropogation();
+
+    // document.querySelector("#google").addEventListener("click", (e) => {
+    //   console.log("click google");
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    // });
+
+    // document.querySelector("#image").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("ul clicked");
+    //   },
+    //   false
+    // );
+    // document.querySelector("#gate").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("gate click");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    //*****Task: every image when click in webpage should be vanished************/
+
+    //first way
+    const images = document.querySelectorAll("li");
+    console.log(images);
+    images.forEach((img) => {
+      img.addEventListener("click", (e) => {
+        console.log(e.target);
+        e.target.remove();
+      });
+    });
+
+    //secondway
+    // document.querySelector("#image").addEventListener("click", (e) => {
+    //   console.log(e.target);
+    //   console.log(e.target.tagName);
+    //   if (e.target.tagName == "IMG") {
+    //     e.target.remove();
+    //   }
+    // });
+  </script>
+</html>
