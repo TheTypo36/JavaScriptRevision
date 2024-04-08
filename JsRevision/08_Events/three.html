@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Katoruki</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    let i = 0;
+    let printSpecialPerson;
+    const heading = document.querySelector("h1");
+    document.querySelector("#start").addEventListener("click", () => {
+      printSpecialPerson = setInterval(function () {
+        heading.innerText = "Katoruki" + i;
+        console.log(heading.textContent);
+        i++;
+      }, 1000);
+    });
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(printSpecialPerson);
+    });
+  </script>
+</html>
