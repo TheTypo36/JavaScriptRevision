@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: white;
+        background-color: black;
+      }
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <p>press any key and see the magic</p>
+      <h2 id="h"></h2>
+    </div>
+  </body>
+  <script>
+    const h = document.querySelector("#h");
+    window.addEventListener("keydown", (e) => {
+      console.log(e.keyCode);
+      if (e.key === "Backspace" && h.textContent != "") {
+        let content = h.textContent;
+        h.innerText = content.slice(0, -1);
+      } else if (e.key === " ") {
+        console.log("here");
+
+        h.innerText += " ";
+      } else if (e.key === "Enter") {
+        console.log("here1");
+        h.innerText += "\n";
+      } else {
+        if (!e.ctrlKey && !e.altKey && !e.shiftKey) h.innerHTML += e.key;
+      }
+    });
+  </script>
+</html>
