@@ -91,6 +91,10 @@ lifeOfAshishAnvi();
 
 //fetching data using promises
 
+//the status code like 200 and 404 after fetching the api , we get in the response only
+//it is not in the error because you fetch the code the action have resolve so , the respone only have
+//these status code
+
 fetch("https://api.github.com/users/TheTypo36")
   .then((response) => {
     return response.json();
